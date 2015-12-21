@@ -1,0 +1,22 @@
+wget --directory-prefix=/usr/bin/ https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+
+CREATE USER twuser WITH PASSWORD 'tweetcount';
+DROP DATABASE IF EXISTS Tcount;
+CREATE DATABASE Tcount;
+\c tcount;
+CREATE TABLE Tweetwordcount (
+  word text,
+  count bigint,
+  PRIMARY KEY (word)
+);
+GRANT SELECT,INSERT,UPDATE,DELETE ON "tweetwordcount" TO twuser; 
+\q
+
+
+EDIT
+
+/var/lib/pgsql/data/pg_hba.conf
+
+local   tcount         twuser                            password
+
+psql -U twuser -d tcount
