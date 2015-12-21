@@ -43,6 +43,10 @@ GRANT SELECT,INSERT,UPDATE,DELETE ON "tweetwordcount" TO twuser;
 \q
 ```
 
+```
+service postgresql start
+```
+
 ## Run Tweets Streaming
 
 ```
