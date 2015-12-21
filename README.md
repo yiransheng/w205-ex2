@@ -1,5 +1,11 @@
 # Exercise 2
 
+## Install Dependencies
+
+```
+pip install streamparse psycopg2 argparse tweepy
+```
+
 ## Setup Postgresql
 
 First, config `postgresql`
