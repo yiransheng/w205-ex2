@@ -49,7 +49,7 @@ service postgresql start
 
 ## Run Tweets Streaming
 
-Add tweeter api credentials to `src/spouts/tweets.py`
+Add twitter api credentials to `src/spouts/tweets.py`
 
 ```
 sparse run
